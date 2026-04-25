@@ -29,6 +29,15 @@ Tabel berikut menunjukkan hasil pengujian fungsionalitas aplikasi dibandingkan d
 
 ---
 
+## 🛡️ Technical Note: Autentikasi & Keamanan Data
+Aplikasi ini secara sengaja tidak menyediakan fitur **"Register Akun"** secara publik. Berikut adalah pertimbangan teknis dan strategis di balik keputusan tersebut:
+
+* **Integrasi SSO (Single Sign-On)**: Sistem dirancang untuk diintegrasikan langsung dengan database email institusi (*@student.umm.ac.id*). Hal ini memastikan setiap pengguna adalah entitas valid yang terdaftar secara resmi di kampus.
+* **Pencegahan Rekayasa Aspirasi**: Menghindari potensi manipulasi data atau "spam" aspirasi dari oknum luar kampus. Dengan sistem tertutup, integritas voting dan suara mahasiswa tetap terjaga.
+* **Validasi PIC (Person In Charge)**: Penggunaan akun institusi memudahkan sistem untuk memetakan keluhan langsung ke unit kerja atau birokrasi terkait berdasarkan identitas mahasiswa.
+
+---
+
 ## 🛠️ Arsitektur Teknologi
 * **Frontend**: HTML5, Tailwind CSS (Modern & Responsive UI).
 * **Backend & Auth**: Firebase Authentication (Institutional Email Validation).
@@ -45,7 +54,7 @@ Tabel berikut menunjukkan hasil pengujian fungsionalitas aplikasi dibandingkan d
 ## 📦 Instalasi & Jalankan Lokal
 1.  Clone repository ini:
     ```bash
-    git clone https://github.com/ErkPH/SIAM-DAILY7.git
+    git clone [https://github.com/ErkPH/SIAM-DAILY7.git](https://github.com/ErkPH/SIAM-DAILY7.git)
     ```
 2.  Buka file `index.html` di browser (atau gunakan Live Server di VS Code).
 3.  Pastikan koneksi internet aktif untuk memuat library Firebase dan Tailwind.
@@ -53,5 +62,5 @@ Tabel berikut menunjukkan hasil pengujian fungsionalitas aplikasi dibandingkan d
 ---
 
 ### 🔗 Tautan Terkait
-* **Live Demo (Hosting)**: https://siam-kampus.web.app
+* **Live Demo (Hosting)**: [https://siam-kampus.web.app](https://siam-kampus.web.app)
 * **Developer**: Erik Putra Hernanda (23-250) - Teknik Informatika Universitas Muhammadiyah Malang.
