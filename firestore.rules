@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Aturan untuk koleksi aspirasi
+    match /aspirasi/{document} {
+      // Publik bisa baca data (Biar feed di landing page muncul)
+      allow read: if true;
+      
+      // Harus login untuk kirim aspirasi atau voting
+      allow create, update: if request.auth != null;
+      
+      // Proteksi ekstra: Hanya Admin yang bisa hapus permanen
+      allow delete: if request.auth != null && request.auth.token.email == 'admin@umm.ac.id';
+    }
+    
+  }
+}
